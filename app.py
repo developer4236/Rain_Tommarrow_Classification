@@ -97,12 +97,15 @@ selected_data = (min_tem,max_temp,rain_fall,windgust_dir,windgust_speed,winddir_
 try:
     if st.button('Predict'):
         rehasped_data = np.asarray(selected_data).reshape(1,-1)
-        prediction = model.predict(rehasped_data)
-        if prediction[0] == 0:
-            st.warning("it won't rain tomorrow")
+        if 'select' in reshaped_data or '' in reshaped_data:
+            st.warning('Please fill all values')
         else:
-            st.success("It will be rainy tomorrow")
-except:
-    print('Please Fill all values')
+            prediction = model.predict(rehasped_data)
+            if prediction[0] == 0:
+                st.warning("it won't rain tomorrow")
+            else:
+                st.success("It will be rainy tomorrow")
+except Exception as e:
+    st.warning(f'An error occurred: {e}')
 
 
