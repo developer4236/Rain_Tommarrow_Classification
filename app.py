@@ -96,7 +96,7 @@ st.write(selected_data)
 # Final Prediction
 try:
     if st.button('Predict'):
-        rehasped_data = np.asarray(selected_data).reshape(1,-1)
+        reshaped_data = np.asarray(selected_data).reshape(1,-1)
         if 'select' in reshaped_data or '' in reshaped_data:
             st.warning('Please fill all values')
         else:
