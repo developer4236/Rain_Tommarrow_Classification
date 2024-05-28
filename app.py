@@ -100,7 +100,7 @@ try:
         if 'select' in reshaped_data or '' in reshaped_data:
             st.warning('Please fill all values')
         else:
-            prediction = model.predict(rehasped_data)
+            prediction = model.predict(reshaped_data)
             if prediction[0] == 0:
                 st.warning("it won't rain tomorrow")
             else:
