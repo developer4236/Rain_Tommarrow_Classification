@@ -91,7 +91,7 @@ with col2:
 selected_data = (min_tem,max_temp,rain_fall,windgust_dir,windgust_speed,winddir_9am,winddir_3pm,windspeed_9am,windspeed_3pm,humidity_9am,
                  humidity_3pm,pressure_9am,pressure_3pm,temp_9am,temp_3pm,risk_mm)
 
-
+st.write(selected_data)
 
 # Final Prediction
 try:
